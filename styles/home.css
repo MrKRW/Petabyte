@@ -154,7 +154,6 @@ nav li a:hover{
 
 
 
-
 /*Our website info*/
 .Ourweb1 {
     max-width: 100%; 
@@ -178,6 +177,9 @@ nav li a:hover{
 ol{
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
+    align-content:center;
+    justify-content:center;
+
 }
 
 
