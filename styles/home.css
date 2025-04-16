@@ -48,15 +48,46 @@ nav li a:hover{
     right: 10px; 
 }
 
+/* Mobile Navigation Styles */
 @media (max-width: 700px) {
     nav {
-        display: none; /* Hide the navigation bar */
+        display: none; /* Hide the navigation bar by default on mobile */
     }
 
     .hamburger {
         display: block; /* Show the hamburger menu */
         cursor: pointer;
-        align-items: center; 
+        position: absolute;
+        top: 25px; 
+        right: 20px;
+        z-index: 101;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav ul li {
+        padding: 15px 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+    
+    /* Style for when menu is open */
+    nav.open {
+        display: block;
+        position: absolute;
+        top: 80px;
+        right: 10px;
+        width: 250px;
+        background-color: hsl(0, 1%, 17%);
+        border-radius: 15px;
+        z-index: 100;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
 }
 
