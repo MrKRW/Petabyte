@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const cartContentElement = document.getElementById('cart-content');
     const continueShoppingBtn = document.getElementById('continue-shopping');
     const checkoutBtn = document.getElementById('checkout-btn');
+    const addToFavoritesBtn = document.getElementById('addToFavorites');
+    const applyFavoritesBtn = document.getElementById('applyFavorites');
     
     // Initialize cart from localStorage
     let cart = [];
@@ -86,6 +88,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Add event listeners to the newly created buttons
         addCartEventListeners();
+        
+        // Enable checkout button
+        checkoutBtn.disabled = false;
+        checkoutBtn.style.opacity = 1;
     }
     
     // Add event listeners for cart interactions
@@ -173,15 +179,85 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Checkout button event listener
     checkoutBtn.addEventListener('click', function() {
-        alert('Thank you for your purchase! This is where the checkout process would begin.');
         window.location.href = 'payment info.html';
         // Clear cart after purchase
         cart = [];
         localStorage.setItem('computerPartsCart', JSON.stringify(cart));
         displayCart();
-
     });
     
-    // Initial display of cart
+    // Function to save current cart as favorite
+    function saveAsFavorite() {
+        if (cart.length === 0) {
+            alert("Your cart is empty. Please add items before saving as favorite.");
+            return;
+        }
+        
+        // Save the current cart as favorite in localStorage
+        localStorage.setItem('favoriteComputerPartsCart', JSON.stringify(cart));
+        
+        // Show confirmation to user
+        alert("Your cart has been saved as a favorite!");
+    }
+    
+    // Function to apply favorites to current cart
+    function applyFavorites() {
+        // Get saved favorites from localStorage
+        const favorites = localStorage.getItem('favoriteComputerPartsCart');
+        
+        if (!favorites) {
+            alert("No favorites found. Save a cart as favorite first.");
+            return;
+        }
+        
+        // Replace current cart with favorites
+        cart = JSON.parse(favorites);
+        
+        // Save to localStorage
+        localStorage.setItem('computerPartsCart', JSON.stringify(cart));
+        
+        // Update display
+        displayCart();
+        
+        // Show confirmation to user
+        alert("Your favorites have been applied to the cart!");
+    }
+    
+    // Add event listeners for favorites buttons
+    addToFavoritesBtn.addEventListener('click', saveAsFavorite);
+    applyFavoritesBtn.addEventListener('click', applyFavorites);
+    
+    // Initialize the cart display
     displayCart();
 });
+
+// Make the functions globally available for the onclick attributes
+window.saveAsFavorite = function() {
+    const savedCart = localStorage.getItem('computerPartsCart');
+    if (!savedCart || JSON.parse(savedCart).length === 0) {
+        alert("Your cart is empty. Please add items before saving as favorite.");
+        return;
+    }
+    
+    // Save the current cart as favorite in localStorage
+    localStorage.setItem('favoriteComputerPartsCart', savedCart);
+    
+    // Show confirmation to user
+    alert("Your cart has been saved as a favorite!");
+};
+
+window.applyFavorites = function() {
+    // Get saved favorites from localStorage
+    const favorites = localStorage.getItem('favoriteComputerPartsCart');
+    
+    if (!favorites) {
+        alert("No favorites found. Save a cart as favorite first.");
+        return;
+    }
+    
+    // Replace current cart with favorites
+    localStorage.setItem('computerPartsCart', favorites);
+    
+    // Reload page to update cart display
+    location.reload();
+};
