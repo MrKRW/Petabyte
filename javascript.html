@@ -53,38 +53,40 @@
 
     <!-----------------------------------------------------------------Categories    starts------------------------------------------------------------------------->
 <div class=" items">
-    <!--Processors-->
+   <!--Processors-->
     <div id="processors" class="category">
       <h2>Processors</h2>
       <div class="grid-container">
         <div class="grid-item">
-          <img src="images/JS page/processors/i3.png" alt="i3">
+          <img src="images/JS page/processors/i3.png" alt="Intel Core i3-13900K processor">
           <div class="product-info">Intel Core i3-13900K
             <p>High-performance processor with 24 cores, 32 threads, and up to 5.8 GHz turbo boost.</p>
           </div>
           <div class="info">
             <div class="quantity-control">
-              <button class="quantity-btn" data-action="decrease">-</button>
-              <input type="number" min="0" value="0" class="quantity-input" 
-                     data-id="proc-1" data-name="AMD Ryzen 7 5800X" data-price="299.99">
-              <button class="quantity-btn" data-action="increase">+</button>
+              <button class="quantity-btn" data-action="decrease" aria-label="Decrease quantity">-</button>
+              <label for="i3-quantity" class="sr-only">Intel Core i3-13900K quantity</label>
+              <input type="number" min="0" value="0" id="i3-quantity" class="quantity-input" 
+                     data-id="proc-1" data-name="Intel Core i3-13900K" data-price="249.99">
+              <button class="quantity-btn" data-action="increase" aria-label="Increase quantity">+</button>
           </div>
-            <button class="add-to-cart-btn">Add to Cart</button>
+          <button class="add-to-cart-btn">Add to Cart</button>
            
             <p>Price: $249.99</p>
           </div></div> 
 
         <div class="grid-item">
-          <img src="images/JS page/processors/i5.png" alt="i5">
+          <img src="images/JS page/processors/i5.png" alt="AMD Ryzen 9 7950X processor">
           <div class="product-info">AMD Ryzen 9 7950X
             <p>Powerful 16-core, 32-thread processor with exceptional multi-core performance.</p>
           </div>
           <div class="info">
             <div class="quantity-control">
-              <button class="quantity-btn" data-action="decrease">-</button>
-              <input type="number" min="0" value="0" class="quantity-input" 
-                     data-id="proc-1" data-name="AMD Ryzen 7 5800X" data-price="299.99">
-              <button class="quantity-btn" data-action="increase">+</button>
+              <button class="quantity-btn" data-action="decrease" aria-label="Decrease quantity">-</button>
+              <label for="ryzen9-quantity" class="sr-only">AMD Ryzen 9 7950X quantity</label>
+              <input type="number" min="0" value="0" id="ryzen9-quantity" class="quantity-input" 
+                     data-id="proc-2" data-name="AMD Ryzen 9 7950X" data-price="249.99">
+              <button class="quantity-btn" data-action="increase" aria-label="Increase quantity">+</button>
           </div>
             <button class="add-to-cart-btn">Add to Cart</button>
             
@@ -92,16 +94,17 @@
           </div></div> 
 
         <div class="grid-item">
-          <img src="images/JS page/processors/I7-14700.png" alt="Intel Core i7">
+          <img src="images/JS page/processors/I7-14700.png" alt="Intel Core i7-13700K processor">
           <div class="product-info">Intel Core i7-13700K
             <p>Balanced performance with 16 cores, 24 threads, ideal for gaming and productivity.</p>
           </div>
           <div class="info">
             <div class="quantity-control">
-              <button class="quantity-btn" data-action="decrease">-</button>
-              <input type="number" min="0" value="0" class="quantity-input" 
-                     data-id="proc-1" data-name="AMD Ryzen 7 5800X" data-price="299.99">
-              <button class="quantity-btn" data-action="increase">+</button>
+              <button class="quantity-btn" data-action="decrease" aria-label="Decrease quantity">-</button>
+              <label for="i7-quantity" class="sr-only">Intel Core i7-13700K quantity</label>
+              <input type="number" min="0" value="0" id="i7-quantity" class="quantity-input" 
+                     data-id="proc-3" data-name="Intel Core i7-13700K" data-price="249.99">
+              <button class="quantity-btn" data-action="increase" aria-label="Increase quantity">+</button>
           </div>
             <button class="add-to-cart-btn">Add to Cart</button>
         
@@ -109,16 +112,17 @@
           </div></div> 
 
         <div class="grid-item">
-          <img src="images/JS page/processors/ry 3.png " alt="AMD Ryzen 3">
+          <img src="images/JS page/processors/ry 3.png" alt="AMD Ryzen 7 7700X processor">
           <div class="product-info">AMD Ryzen 7 7700X
             <p>8-core, 16-thread processor with excellent single and multi-core performance.</p>
           </div>
           <div class="info">
             <div class="quantity-control">
-              <button class="quantity-btn" data-action="decrease">-</button>
-              <input type="number" min="0" value="0" class="quantity-input" 
-                     data-id="proc-1" data-name="AMD Ryzen 7 5800X" data-price="299.99">
-              <button class="quantity-btn" data-action="increase">+</button>
+              <button class="quantity-btn" data-action="decrease" aria-label="Decrease quantity">-</button>
+              <label for="ryzen7-quantity" class="sr-only">AMD Ryzen 7 7700X quantity</label>
+              <input type="number" min="0" value="0" id="ryzen7-quantity" class="quantity-input" 
+                     data-id="proc-4" data-name="AMD Ryzen 7 7700X" data-price="249.99">
+              <button class="quantity-btn" data-action="increase" aria-label="Increase quantity">+</button>
           </div>
             <button class="add-to-cart-btn">Add to Cart</button>
             
@@ -126,16 +130,17 @@
           </div></div> 
 
         <div class="grid-item">
-          <img src="images/JS page/processors/ry 5.png" alt="ry 5">
+          <img src="images/JS page/processors/ry 5.png" alt="Intel Core i5-13600K processor">
           <div class="product-info">Intel Core i5-13600K
             <p>Mid-range processor with 14 cores, 20 threads, great for gaming and everyday tasks.</p>
           </div>
          <div class="info">
           <div class="quantity-control">
-            <button class="quantity-btn" data-action="decrease">-</button>
-            <input type="number" min="0" value="0" class="quantity-input" 
-                   data-id="proc-1" data-name="AMD Ryzen 7 5800X" data-price="299.99">
-            <button class="quantity-btn" data-action="increase">+</button>
+            <button class="quantity-btn" data-action="decrease" aria-label="Decrease quantity">-</button>
+            <label for="i5-quantity" class="sr-only">Intel Core i5-13600K quantity</label>
+            <input type="number" min="0" value="0" id="i5-quantity" class="quantity-input" 
+                   data-id="proc-5" data-name="Intel Core i5-13600K" data-price="249.99">
+            <button class="quantity-btn" data-action="increase" aria-label="Increase quantity">+</button>
         </div>
             <button class="add-to-cart-btn">Add to Cart</button>
             
@@ -143,16 +148,17 @@
           </div></div> 
 
         <div class="grid-item">
-          <img src="images/JS page/processors/ry 7.png "alt="AMD Ryzen 7">
+          <img src="images/JS page/processors/ry 7.png" alt="AMD Ryzen 5 7600X processor">
           <div class="product-info">AMD Ryzen 5 7600X
             <p>6-core, 12-thread processor offering excellent value and performance.</p>
           </div>
           <div class="info">
             <div class="quantity-control">
-              <button class="quantity-btn" data-action="decrease">-</button>
-              <input type="number" min="0" value="0" class="quantity-input" 
-                     data-id="proc-1" data-name="AMD Ryzen 7 5800X" data-price="299.99">
-              <button class="quantity-btn" data-action="increase">+</button>
+              <button class="quantity-btn" data-action="decrease" aria-label="Decrease quantity">-</button>
+              <label for="ryzen5-quantity" class="sr-only">AMD Ryzen 5 7600X quantity</label>
+              <input type="number" min="0" value="0" id="ryzen5-quantity" class="quantity-input" 
+                     data-id="proc-6" data-name="AMD Ryzen 5 7600X" data-price="249.99">
+              <button class="quantity-btn" data-action="increase" aria-label="Increase quantity">+</button>
           </div>
             <button class="add-to-cart-btn">Add to Cart</button>
             <p>Price: $249.99</p>
@@ -165,16 +171,17 @@
       <h2>Graphic Cards</h2>
       <div class="grid-container">
         <div class="grid-item">
-          <img src="images/JS page/GPU/1582-20230719130825-MSI-RTX-4070-GAMING-X-TRIO.png" alt="NVIDIA RTX 4090">
+          <img src="images/JS page/GPU/1582-20230719130825-MSI-RTX-4070-GAMING-X-TRIO.png" alt="NVIDIA GeForce RTX 4070 graphics card">
           <div class="product-info">NVIDIA GeForce RTX 4070
             <p>Ultimate gaming GPU with 24GB GDDR6X memory and cutting-edge ray tracing capabilities.</p>
           </div>
           <div class="info">
             <div class="quantity-control">
-              <button class="quantity-btn" data-action="decrease">-</button>
-              <input type="number" min="0" value="0" class="quantity-input" 
-                     data-id="proc-1" data-name="AMD Ryzen 7 5800X" data-price="299.99">
-              <button class="quantity-btn" data-action="increase">+</button>
+              <button class="quantity-btn" data-action="decrease" aria-label="Decrease quantity">-</button>
+              <label for="rtx4070-quantity" class="sr-only">NVIDIA GeForce RTX 4070 quantity</label>
+              <input type="number" min="0" value="0" id="rtx4070-quantity" class="quantity-input" 
+                     data-id="gpu-1" data-name="NVIDIA GeForce RTX 4070" data-price="1599.99">
+              <button class="quantity-btn" data-action="increase" aria-label="Increase quantity">+</button>
           </div>
             <button class="add-to-cart-btn">Add to Cart</button>
             
@@ -182,80 +189,91 @@
             
         </div>
         <div class="grid-item">
-          <img src="images/JS page/GPU/ASUS-DUAL-GEFORCE-RTX-4060-8GB-GDDR6-OC-GRAPHICS-CARD-sri-lanka-badudeal.lk_.png" alt="AMD Radeon RX 7900 XT">
+          <img src="images/JS page/GPU/ASUS-DUAL-GEFORCE-RTX-4060-8GB-GDDR6-OC-GRAPHICS-CARD-sri-lanka-badudeal.lk_.png" alt="AMD Radeon RX 7900 XT graphics card">
           <div class="product-info">AMD Radeon RX 7900 XT
             <p>High-performance graphics card with advanced RDNA 3 architecture.</p>
           </div>
           <div class="info">
             <div class="quantity-control">
-              <button class="quantity-btn" data-action="decrease">-</button>
-              <input type="number" min="0" value="0" class="quantity-input" 
-                     data-id="proc-1" data-name="AMD Ryzen 7 5800X" data-price="299.99">
-              <button class="quantity-btn" data-action="increase">+</button>
+              <button class="quantity-btn" data-action="decrease" aria-label="Decrease quantity">-</button>
+              <label for="rx7900-quantity" class="sr-only">AMD Radeon RX 7900 XT quantity</label>
+              <input type="number" min="0" value="0" id="rx7900-quantity" class="quantity-input" 
+                     data-id="gpu-2" data-name="AMD Radeon RX 7900 XT" data-price="999.99">
+              <button class="quantity-btn" data-action="increase" aria-label="Increase quantity">+</button>
           </div>
             <button class="add-to-cart-btn">Add to Cart</button>
             
             <p>Price: $999.99</p></div>
         </div>
+        
+        <!-- Continuing with the rest of the graphics cards... -->
         <div class="grid-item">
-          <img src="images/JS page/GPU/972a197921f9f680d0fd106d01a13b1f.png" alt="NVIDIA RTX 4080">
+          <img src="images/JS page/GPU/972a197921f9f680d0fd106d01a13b1f.png" alt="NVIDIA GeForce RTX 4080 graphics card">
           <div class="product-info">NVIDIA GeForce RTX 4080
             <p>Powerful GPU with 16GB GDDR6X, excellent for 4K gaming and content creation.</p>
           </div>
           <div class="info">
             <div class="quantity-control">
-              <button class="quantity-btn" data-action="decrease">-</button>
-              <input type="number" min="0" value="0" class="quantity-input" 
-                     data-id="proc-1" data-name="AMD Ryzen 7 5800X" data-price="299.99">
-              <button class="quantity-btn" data-action="increase">+</button>
+              <button class="quantity-btn" data-action="decrease" aria-label="Decrease quantity">-</button>
+              <label for="rtx4080-quantity" class="sr-only">NVIDIA GeForce RTX 4080 quantity</label>
+              <input type="number" min="0" value="0" id="rtx4080-quantity" class="quantity-input" 
+                     data-id="gpu-3" data-name="NVIDIA GeForce RTX 4080" data-price="1199.99">
+              <button class="quantity-btn" data-action="increase" aria-label="Increase quantity">+</button>
           </div>
             <button class="add-to-cart-btn">Add to Cart</button>
             
             <p>Price: $1,199.99</p></div>
         </div>
+        
+        <!-- Additional graphics cards... -->
         <div class="grid-item">
-          <img src="images/JS page/GPU/imagees.png" alt="AMD Radeon RX 6800 XT">
+          <img src="images/JS page/GPU/imagees.png" alt="AMD Radeon RX 6800 XT graphics card">
           <div class="product-info">AMD Radeon RX 6800 XT
             <p>High-performance graphics card with 16GB GDDR6 memory.</p>
           </div>
           <div class="info">
             <div class="quantity-control">
-              <button class="quantity-btn" data-action="decrease">-</button>
-              <input type="number" min="0" value="0" class="quantity-input" 
-                     data-id="proc-1" data-name="AMD Ryzen 7 5800X" data-price="299.99">
-              <button class="quantity-btn" data-action="increase">+</button>
+              <button class="quantity-btn" data-action="decrease" aria-label="Decrease quantity">-</button>
+              <label for="rx6800-quantity" class="sr-only">AMD Radeon RX 6800 XT quantity</label>
+              <input type="number" min="0" value="0" id="rx6800-quantity" class="quantity-input" 
+                     data-id="gpu-4" data-name="AMD Radeon RX 6800 XT" data-price="649.99">
+              <button class="quantity-btn" data-action="increase" aria-label="Increase quantity">+</button>
           </div>
             <button class="add-to-cart-btn">Add to Cart</button>
             
             <p>Price: $649.99</p></div>
         </div>
+        
         <div class="grid-item">
-          <img src="images/JS page/GPU/images.png" alt="NVIDIA RTX 4070">
+          <img src="images/JS page/GPU/images.png" alt="NVIDIA GeForce RTX 4070 graphics card">
           <div class="product-info">NVIDIA GeForce RTX 4070
             <p>Mid-range GPU with excellent 1440p gaming performance.</p>
           </div>
           <div class="info">
             <div class="quantity-control">
-              <button class="quantity-btn" data-action="decrease">-</button>
-              <input type="number" min="0" value="0" class="quantity-input" 
-                     data-id="proc-1" data-name="AMD Ryzen 7 5800X" data-price="299.99">
-              <button class="quantity-btn" data-action="increase">+</button>
+              <button class="quantity-btn" data-action="decrease" aria-label="Decrease quantity">-</button>
+              <label for="rtx4070-alt-quantity" class="sr-only">NVIDIA GeForce RTX 4070 quantity</label>
+              <input type="number" min="0" value="0" id="rtx4070-alt-quantity" class="quantity-input" 
+                     data-id="gpu-5" data-name="NVIDIA GeForce RTX 4070" data-price="599.99">
+              <button class="quantity-btn" data-action="increase" aria-label="Increase quantity">+</button>
           </div>
             <button class="add-to-cart-btn">Add to Cart</button>
             
             <p>Price: $599.99</p></div>
         </div>
+        
         <div class="grid-item">
-          <img src="images/JS page/GPU/rtx-3080-gaming-z-trio-10g-lhr-image-main-600x600-1.png" alt="AMD Radeon RX 6700 XT">
+          <img src="images/JS page/GPU/rtx-3080-gaming-z-trio-10g-lhr-image-main-600x600-1.png" alt="AMD Radeon RX 6700 XT graphics card">
           <div class="product-info">AMD Radeon RX 6700 XT
             <p>Great 1440p gaming performance with 12GB GDDR6 memory.</p>
           </div>
           <div class="info">
             <div class="quantity-control">
-              <button class="quantity-btn" data-action="decrease">-</button>
-              <input type="number" min="0" value="0" class="quantity-input" 
-                     data-id="proc-1" data-name="AMD Ryzen 7 5800X" data-price="299.99">
-              <button class="quantity-btn" data-action="increase">+</button>
+              <button class="quantity-btn" data-action="decrease" aria-label="Decrease quantity">-</button>
+              <label for="rx6700-quantity" class="sr-only">AMD Radeon RX 6700 XT quantity</label>
+              <input type="number" min="0" value="0" id="rx6700-quantity" class="quantity-input" 
+                     data-id="gpu-6" data-name="AMD Radeon RX 6700 XT" data-price="479.99">
+              <button class="quantity-btn" data-action="increase" aria-label="Increase quantity">+</button>
           </div>
             <button class="add-to-cart-btn">Add to Cart</button>
             
