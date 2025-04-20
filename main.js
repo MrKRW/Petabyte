@@ -228,4 +228,44 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// hamburger menu functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the hamburger button and nav menu elements
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+    
+    // Add click event listener to the hamburger button
+    hamburger.addEventListener('click', function() {
+      // Toggle the 'open' class on the nav element
+      nav.classList.toggle('open');
+      
+      // Optional: Add animation or transition effects
+      if (nav.classList.contains('open')) {
+        // Menu is now open - you could add additional effects here
+        console.log('Menu opened');
+      } else {
+        // Menu is now closed
+        console.log('Menu closed');
+      }
+    });
+    
+    // Close the menu when clicking outside of it
+    document.addEventListener('click', function(event) {
+      const isClickInsideNav = nav.contains(event.target);
+      const isClickOnHamburger = hamburger.contains(event.target);
+      
+      if (!isClickInsideNav && !isClickOnHamburger && nav.classList.contains('open')) {
+        nav.classList.remove('open');
+      }
+    });
+    
+    // Close the menu when window is resized to desktop size
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768 && nav.classList.contains('open')) {
+        nav.classList.remove('open');
+      }
+    });
+  });
+
+
 
