@@ -66,7 +66,7 @@ nav li a:hover{
   }
 }
 /* Mobile Navigation Styles */
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   nav {
       display: none; /* Hide the navigation bar by default on mobile */
   }
