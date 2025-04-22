@@ -431,26 +431,25 @@ footer > p{
 }
 
 
-.nav_foot{
-  
+.nav_foot {
   color: white;
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
   gap: 15px;
-  padding: auto;
+  padding: 10px;
   margin-top: 40px;
-  
 }
 
-.nav_foot a{
+.nav_foot a {
   color: white;
   text-decoration: none;
 }
 
-.nav_foot li:hover{
+.nav_foot li:hover {
   background-color: rgb(65, 65, 65);
   padding: 2px;
 }
+
 
 
 
