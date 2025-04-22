@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Checkout button event listener
     checkoutBtn.addEventListener('click', function() {
-        window.location.href = 'payment info.html';
+        window.location.href = 'payment_info.html';
         // Clear cart after purchase
         cart = [];
         localStorage.setItem('computerPartsCart', JSON.stringify(cart));
