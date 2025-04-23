@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Add event listeners for the continue shopping and checkout buttons
   document.getElementById("continue-shopping").addEventListener("click", function() {
-      window.location.href = "javascript.html"; 
+      window.location.href = "parts.html"; 
   });
   
   });
