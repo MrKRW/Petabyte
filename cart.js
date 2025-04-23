@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Continue shopping button event listener
     continueShoppingBtn.addEventListener('click', function() {
-        window.location.href = 'javascript.html';
+        window.location.href = 'parts.html';
     });
     
     // Checkout button event listener
