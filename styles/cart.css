@@ -286,5 +286,5 @@ footer > p{
 
 .nav_foot ul {
   list-style: none; /* Removes bullet points */
-  padding-left: 0; /* Optional: Removes default padding */
+  padding-left: 0; 
 }

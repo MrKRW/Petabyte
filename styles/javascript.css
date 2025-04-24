@@ -450,10 +450,10 @@ footer > p{
   padding: 2px;
 }
 
-.no-bullets {
-  list-style-type: none;
+.nav_foot ul {
+  list-style: none; /* Removes bullet points */
+  padding-left: 0; 
 }
-
 
 
 
