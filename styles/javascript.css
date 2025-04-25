@@ -316,8 +316,13 @@ h2{
   font-size: 16px;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+#view-cart-btn:hover {
+  background-color: #4200c7;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
 /* Add to cart button */
 .add-to-cart-btn {
   background-color: #4800ff;
