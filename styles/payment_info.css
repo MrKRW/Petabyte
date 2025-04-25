@@ -127,7 +127,6 @@ button {
   color: green;
 }
 
-/*when pay button clicked*/
 #message {
   display: none; /* Hidden by default */
   flex-direction: column;
@@ -138,11 +137,36 @@ button {
   background-color: #333;
   border-radius: 10px;
   text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  transform-origin: center top;
+  transition: all 0.3s ease;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 #message img {
   margin-bottom: 15px;
   width: 250px;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
 }
 
 .deliver_text {
@@ -151,6 +175,17 @@ button {
   font-size: 24px;
   color: #ffffff;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  animation: glowing 2s ease-in-out infinite;
+}
+
+@keyframes glowing {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(96, 0, 186, 0.8);
+    color: #ffffff;
+  }
 }
 
 .continue-shopping, .checkout-btn {
@@ -158,13 +193,71 @@ button {
   padding: 12px 20px;
   width: auto;
   min-width: 200px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  animation: slideIn 0.5s ease-out;
+  animation-fill-mode: backwards;
 }
 
 .continue-shopping {
   background-color: #6000ba;
+  animation-delay: 0.2s;
 }
 
+.checkout-btn {
+  animation-delay: 0.4s;
+}
 
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.continue-shopping:hover, .checkout-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.continue-shopping:active, .checkout-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.continue-shopping::after, .checkout-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+.continue-shopping:hover::after, .checkout-btn:hover::after {
+  animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(20, 20);
+    opacity: 0;
+  }
+}
 
 
 /*footer*/
@@ -227,8 +320,4 @@ footer > p{
   padding: 2px;
 }
 
-.nav_foot ul {
-  list-style: none; /* Removes bullet points */
-  padding-left: 0; 
-}
 
